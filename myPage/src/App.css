@@ -1,0 +1,272 @@
+.content {
+  margin-left: 100px;
+  width: calc(100% - 100px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  overflow-y: none;
+}
+
+.generalHeader {
+  margin: 20px;
+  width: fit-content;
+}
+
+.intro {
+  margin: 100px 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.introBlok {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 20px;
+  width: 35%;
+}
+
+.introImg {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 9999px;
+}
+
+.introHeader {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonIcon {
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
+}
+
+.buttonStyle {
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #33b3ae;
+  transition: background-color 0.3s;
+}
+
+.linkedIn {
+  padding: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #33b3ae;
+  transition: background-color 0.3s;
+}
+
+.buttonStyle:hover,
+.linkedIn:hover {
+  background-color: #33b3ae;
+}
+
+.linkedInButton {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+.myPortfolio {
+  display: flex;
+  margin: 40px 0 40px 2%;
+  width: calc(100% - (100px));
+  gap: 2%;
+}
+
+.portfolioBlockContainer {
+  display: flex;
+  flex-direction: column;
+  width: 23%; /* Each container takes 100% of the parent */
+  /* Each container takes about 20% of the parent */
+}
+
+.portfolioBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: rgb(37, 37, 37) solid 2px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative; /* Relative positioning for the child elements */
+  height: 100%; /* Fill the container */
+}
+
+.portfolioImg {
+  width: 100%;
+  min-height: 150px; /* Image width with 20px padding on each side */
+}
+
+.iconDiv {
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+.myExperience {
+  margin: 100px 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experienceWrapper,
+.experienceWrapper2 {
+  display: flex;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.experienceWrapper {
+  justify-content: start;
+}
+
+.experienceWrapper2 {
+  justify-content: end;
+}
+
+.experienceDiv {
+  margin: 0 50px;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.githubButton {
+  border-radius: 10px;
+  background: linear-gradient(
+      180deg,
+      rgba(183, 52, 179, 0.15) 0%,
+      rgba(164, 46, 156, 0) 100%
+    ),
+    #6e40c9 !important;
+}
+.githubButton:hover {
+  background: #6e40c9 !important;
+}
+
+/* Navbar */
+
+.sidebar {
+  position: fixed;
+  margin: 10vh 0;
+  height: 80vh;
+  width: 130px;
+  display: flex;
+  justify-content: end; /* Align buttons to the right */
+  border-right: 5px solid black;
+}
+.scrollbar {
+  margin-top: 10vh;
+  position: fixed;
+  left: 130px;
+  width: 5px;
+  height: 80vh;
+  z-index: 999;
+}
+
+.scrollbar-thumb {
+  width: 100%;
+  height: 80px;
+  background: radial-gradient(#33b3ae 0%, transparent);
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.scrollButton {
+  position: absolute;
+  background-color: transparent;
+  margin-right: 3px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+.scrollButton:hover {
+  background-image: linear-gradient(100deg, transparent 0%, #33b3ae 100%);
+}
+
+/* Animation */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%) translateY(-20%);
+    transition: all 1s;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0) translateY(0);
+}
+
+.portfolioBlockContainer:nth-child(2) {
+  transition-delay: 200ms;
+}
+.portfolioBlockContainer:nth-child(3) {
+  transition-delay: 400ms;
+}
+.portfolioBlockContainer:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.hidden.generalHeader::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, white);
+  width: 0%;
+  transition: width 1s ease-out;
+}
+
+.show.generalHeader::before {
+  margin: 0 5%;
+  width: 90%;
+}
