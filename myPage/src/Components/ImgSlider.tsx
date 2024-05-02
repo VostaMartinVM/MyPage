@@ -43,13 +43,19 @@ const ImageSliderPopup: FC<props> = ({pictures, styling}) => {
     <div className={styling}>
       <div className="arrowContainer">
         <div
-          onClick={goToPrevious}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToPrevious();
+          }}
           className="leftArrowStyles"
         >
           ❰
         </div>
         <div
-          onClick={goToNext}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToNext();
+          }}
           className="rightArrowStyles"
         >
           ❱
@@ -67,7 +73,8 @@ const ImageSliderPopup: FC<props> = ({pictures, styling}) => {
             <div
               className={currentIndex === slideIndex ? "activeDot" : "dotStyle"}
               key={slideIndex}
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation();
                 goToSlide(slideIndex);
               }}
             >
