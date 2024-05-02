@@ -19,6 +19,7 @@ import {CgAtlasian} from "react-icons/cg";
 import {SiStyledcomponents} from "react-icons/si";
 import "./App.css";
 import {useEffect, useState} from "react";
+import Slider from "./Components/ImgSlider";
 
 function App() {
   const [, setCurrentSection] = useState("intro");
@@ -126,7 +127,7 @@ function App() {
               mouseX - rect.left
             }px ${
               mouseY - rect.top
-            }px,  rgba(51, 179, 174, 0.7), transparent 60%)`;
+            }px,  rgba(51, 179, 174, 0.4), transparent 40%)`;
 
             block.style.boxShadow = "0 0 10px rgba(0, 0, 0, 1)";
           });
@@ -145,6 +146,24 @@ function App() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  const links = [
+    "mailto:vostamartinvm@gmail.com",
+    "https://www.linkedin.com/in/martin-vo%C5%A1ta-454605232/",
+    "https://github.com/VostaMartinVM/namyte",
+    "https://github.com/VostaMartinVM/namyte",
+    "https://github.com/VostaMartinVM/TelMe",
+    "https://github.com/VostaMartinVM/RedditIdea",
+    "https://github.com/VostaMartinVM",
+  ];
+
+  function openLink(index: number) {
+    if (index >= 0 && index < links.length) {
+      window.open(links[index], "_blank");
+    } else {
+      console.error("Invalid link index");
+    }
+  }
 
   return (
     <>
@@ -172,11 +191,13 @@ function App() {
       >
         <div className="intro">
           <div className="introBlok">
-            <img
-              src="./images/img0.jpg"
-              alt=""
-              className="introImg"
-            />
+            <div className="imgMask">
+              <img
+                src="./images/img0.jpg"
+                alt=""
+                className="introImg"
+              />
+            </div>
           </div>
           <div className="introBlok">
             <h1 className="introHeader">
@@ -188,10 +209,20 @@ function App() {
               bring your digital ideas to reality.
             </p>
             <div className="buttonWrapper">
-              <button className="buttonStyle">
+              <button
+                onClick={() => {
+                  openLink(0);
+                }}
+                className="buttonStyle"
+              >
                 Contact me <MdOutgoingMail className="buttonIcon" />
               </button>
-              <button className="linkedIn">
+              <button
+                onClick={() => {
+                  openLink(1);
+                }}
+                className="linkedIn"
+              >
                 <FaLinkedin className="linkedInButton" />
               </button>
             </div>
@@ -210,14 +241,16 @@ function App() {
               className="portfolioBlockContainer hidden"
             >
               <div
+                onClick={() => {
+                  openLink(2);
+                }}
                 id="portfolioBlock"
                 className="portfolioBlock"
               >
-                <img
-                  src="./images/img1.jpg"
-                  alt=""
-                  className="portfolioImg"
-                />
+                <Slider
+                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  styling="slider"
+                ></Slider>
                 <h2>Na Myte</h2>
                 <p>
                   Website for Restaurant Na Mýtě based in Tábor, Czech Republic.
@@ -239,14 +272,16 @@ function App() {
               className="portfolioBlockContainer hidden"
             >
               <div
+                onClick={() => {
+                  openLink(3);
+                }}
                 id="portfolioBlock"
                 className="portfolioBlock"
               >
-                <img
-                  src="./images/img1.jpg"
-                  alt=""
-                  className="portfolioImg"
-                />
+                <Slider
+                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  styling="slider"
+                ></Slider>
                 <h2>Trip Planner</h2>
                 <p>
                   Website for trip planning and note making for places you want
@@ -268,14 +303,16 @@ function App() {
               className="portfolioBlockContainer hidden"
             >
               <div
+                onClick={() => {
+                  openLink(4);
+                }}
                 id="portfolioBlock"
                 className="portfolioBlock"
               >
-                <img
-                  src="./images/img2.jpg"
-                  alt=""
-                  className="portfolioImg"
-                />
+                <Slider
+                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  styling="slider"
+                ></Slider>
                 <h2>TellMe</h2>
                 <p>
                   Website to keep track of what TV-series and movies you want to
@@ -298,14 +335,16 @@ function App() {
               className="portfolioBlockContainer hidden"
             >
               <div
+                onClick={() => {
+                  openLink(5);
+                }}
                 id="portfolioBlock"
                 className="portfolioBlock"
               >
-                <img
-                  src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                  alt=""
-                  className="portfolioImg"
-                />
+                <Slider
+                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  styling="slider"
+                ></Slider>
                 <h2>RedditIdea</h2>
                 <p>Rogue-like shooter with top-down view</p>
                 <h2>Used technologies:</h2>
@@ -316,7 +355,12 @@ function App() {
               </div>
             </div>
           </div>
-          <button className="githubButton hidden">
+          <button
+            onClick={() => {
+              openLink(6);
+            }}
+            className="githubButton hidden"
+          >
             See my GitHub
             <FaGithub className="buttonIcon" />
           </button>
@@ -396,11 +440,10 @@ function App() {
                   id="portfolioBlock"
                   className="portfolioBlock"
                 >
-                  <img
-                    src="./images/img2.jpg"
-                    alt=""
-                    className="portfolioImg"
-                  />
+                  <Slider
+                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    styling="slider"
+                  ></Slider>
                   <h2>Technologies</h2>
                   <p>
                     My main interest are mobile phones, laptops and connected
@@ -417,11 +460,10 @@ function App() {
                   id="portfolioBlock"
                   className="portfolioBlock"
                 >
-                  <img
-                    src="./images/img3.jpg"
-                    alt=""
-                    className="portfolioImg"
-                  />
+                  <Slider
+                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    styling="slider"
+                  ></Slider>
                   <h2>TV-Series and Movies </h2>
                   <p>
                     My favorite genres are Fantasy, Sci-fy together with Mystery
@@ -438,11 +480,10 @@ function App() {
                   id="portfolioBlock"
                   className="portfolioBlock"
                 >
-                  <img
-                    src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                    alt=""
-                    className="portfolioImg"
-                  />
+                  <Slider
+                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    styling="slider"
+                  ></Slider>
                   <h2>Traveling</h2>
                   <p>
                     For now I mostly visited just Europe countries. My dream is
@@ -458,11 +499,10 @@ function App() {
                   id="portfolioBlock"
                   className="portfolioBlock"
                 >
-                  <img
-                    src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                    alt=""
-                    className="portfolioImg"
-                  />
+                  <Slider
+                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    styling="slider"
+                  ></Slider>
                   <h2>Calisthenics</h2>
                   <p>
                     As my job is mostly sitting behind computer. I find
