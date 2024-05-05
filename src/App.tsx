@@ -151,9 +151,9 @@ function App() {
     "mailto:vostamartinvm@gmail.com",
     "https://www.linkedin.com/in/martin-vo%C5%A1ta-454605232/",
     "https://github.com/VostaMartinVM/namyte",
-    "https://github.com/VostaMartinVM/namyte",
-    "https://github.com/VostaMartinVM/TelMe",
-    "https://github.com/VostaMartinVM/RedditIdea",
+    "https://github.com/VostaMartinVM/ToTL",
+    "https://sep6.vercel.app",
+    "https://www.youtube.com/watch?v=F08jU-wl7Bo&t=4s",
     "https://github.com/VostaMartinVM",
   ];
 
@@ -248,7 +248,13 @@ function App() {
                 className="portfolioBlock"
               >
                 <Slider
-                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  pictures={[
+                    "./naMyte/naMyte1.png",
+                    "./naMyte/naMyte2.png",
+                    "./naMyte/naMyte3.png",
+                    "./naMyte/naMyte4.png",
+                    "./naMyte/naMyte5.png",
+                  ]}
                   styling="slider"
                 ></Slider>
                 <h2>NaMyte</h2>
@@ -280,7 +286,7 @@ function App() {
                 className="portfolioBlock"
               >
                 <Slider
-                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  pictures={["./images/img1.jpg"]}
                   styling="slider"
                 ></Slider>
                 <h2>ToTL</h2>
@@ -311,10 +317,16 @@ function App() {
                 className="portfolioBlock"
               >
                 <Slider
-                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  pictures={[
+                    "./telMe/telMe1.png",
+                    "./telMe/telMe2.png",
+                    "./telMe/telMe3.png",
+                    "./telMe/telMe4.png",
+                    "./telMe/telMe5.png",
+                  ]}
                   styling="slider"
                 ></Slider>
-                <h2>TellMe</h2>
+                <h2>TelMe</h2>
                 <p>
                   Website to keep track of what TV-series and movies you want to
                   watch or look up information about.
@@ -343,7 +355,13 @@ function App() {
                 className="portfolioBlock"
               >
                 <Slider
-                  pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                  pictures={[
+                    "./redditIdea/redditIdea1.png",
+                    "./redditIdea/redditIdea2.png",
+                    "./redditIdea/redditIdea3.png",
+                    "./redditIdea/redditIdea4.png",
+                    "./redditIdea/redditIdea5.png",
+                  ]}
                   styling="slider"
                 ></Slider>
                 <h2>RedditIdea</h2>
