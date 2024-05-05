@@ -127,7 +127,7 @@ function App() {
               mouseX - rect.left
             }px ${
               mouseY - rect.top
-            }px,  rgba(51, 179, 174, 0.4), transparent 40%)`;
+            }px,  rgba(51, 179, 174, 0.1), transparent 100%)`;
 
             block.style.boxShadow = "0 0 10px rgba(0, 0, 0, 1)";
           });
@@ -189,7 +189,7 @@ function App() {
         id="intro"
         className="content"
       >
-        <div className="intro">
+        <div className="intro hidden">
           <div className="introBlok">
             <div className="imgMask">
               <img
@@ -251,9 +251,10 @@ function App() {
                   pictures={["./images/img1.jpg", "./images/img0.jpg"]}
                   styling="slider"
                 ></Slider>
-                <h2>Na Myte</h2>
+                <h2>NaMyte</h2>
                 <p>
-                  Website for Restaurant Na Mýtě based in Tábor, Czech Republic.
+                  Website for Restaurant & Pension Na Mýtě based in Tábor, Czech
+                  Republic.
                 </p>
                 <h2>Used technologies:</h2>
                 <div className="iconDiv">
@@ -282,10 +283,10 @@ function App() {
                   pictures={["./images/img1.jpg", "./images/img0.jpg"]}
                   styling="slider"
                 ></Slider>
-                <h2>Trip Planner</h2>
+                <h2>ToTL</h2>
                 <p>
                   Website for trip planning and note making for places you want
-                  to visit.
+                  to visit together with personal dictionary.
                 </p>
                 <h2>Used technologies:</h2>
                 <div className="iconDiv">
@@ -379,10 +380,11 @@ function App() {
               </div>
               <div>
                 <p>
-                  Work here on 6 months long internship. Worked on bugfixing and
-                  main page structure.
+                  6 months long internship. My work composed mainly of bug
+                  fixing, <br /> main page structure and new designs
+                  implementation.
                 </p>
-                <p>Technologies i worked with:</p>
+                <p className="bold">Technologies i worked with:</p>
                 <FaHtml5 className="icon" />
                 <FaCss3Alt className="icon" />
                 <FaAngular className="icon" />
@@ -405,7 +407,7 @@ function App() {
                   A back-office system for start-up company Shouter to aid their
                   support team.
                 </p>
-                <p>Technologies i worked with:</p>
+                <p className="bold">Technologies i worked with:</p>
                 <FaHtml5 className="icon" />
                 <FaCss3Alt className="icon" />
                 <FaVuejs className="icon" />
@@ -441,14 +443,19 @@ function App() {
                   className="portfolioBlock"
                 >
                   <Slider
-                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    pictures={[
+                      "./technologies/tech1.jpg",
+                      "./technologies/tech2.jpg",
+                      "./technologies/tech3.jpg",
+                      "./technologies/tech4.jpg",
+                    ]}
                     styling="slider"
                   ></Slider>
                   <h2>Technologies</h2>
                   <p>
-                    My main interest are mobile phones, laptops and connected
-                    technologies together with smart home and of course AI and
-                    Programming.
+                    My main tech interests are mobile phones, laptops, their
+                    gadgets and connected technologies together with smart home
+                    and of course AI and Programming.
                   </p>
                 </div>
               </div>
@@ -461,14 +468,29 @@ function App() {
                   className="portfolioBlock"
                 >
                   <Slider
-                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    pictures={[
+                      "./tvSeries/media1.jpg",
+                      "./tvSeries/media2.jpg",
+                      "./tvSeries/media3.jpg",
+                      "./tvSeries/media4.jpg",
+                      "./tvSeries/media5.jpeg",
+                      "./tvSeries/media6.jpg",
+                      "./tvSeries/media7.jpg",
+                      "./tvSeries/media8.jpg",
+                      "./tvSeries/media9.jpg",
+                      "./tvSeries/media10.png",
+                      "./tvSeries/media11.jpg",
+                      "./tvSeries/media12.jpg",
+                      "./tvSeries/media13.jpg",
+                    ]}
                     styling="slider"
                   ></Slider>
                   <h2>TV-Series and Movies </h2>
                   <p>
                     My favorite genres are Fantasy, Sci-fy together with Mystery
-                    and Drama. I also watch a lot of Anime and Yotube. I&apos;m
-                    not much of a Horror fan.
+                    and Drama. I also watch a lot of Anime and Youtube. I&apos;m
+                    also not much of a Horror fan. Up you can see some of my
+                    favorite shows.
                   </p>
                 </div>
               </div>
@@ -481,13 +503,23 @@ function App() {
                   className="portfolioBlock"
                 >
                   <Slider
-                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    pictures={[
+                      "./traveling/travel2.jpg",
+                      "./traveling/travel4.jpg",
+                      "./traveling/travel5.jpg",
+                      "./traveling/travel6.jpg",
+                      "./traveling/travel8.jpg",
+                      "./traveling/travel12.jpg",
+                      "./traveling/travel13.jpg",
+                      "./traveling/travel14.jpg",
+                    ]}
                     styling="slider"
                   ></Slider>
                   <h2>Traveling</h2>
                   <p>
                     For now I mostly visited just Europe countries. My dream is
-                    to travel through eastern asia especially Japan.
+                    to travel through eastern asia especially Japan. Take a look
+                    at some photos from my Europe travels.
                   </p>
                 </div>
               </div>
@@ -500,14 +532,19 @@ function App() {
                   className="portfolioBlock"
                 >
                   <Slider
-                    pictures={["./images/img1.jpg", "./images/img0.jpg"]}
+                    pictures={[
+                      "./calisthenics/calisthenics1.jpg",
+                      "./calisthenics/calisthenics2.jpg",
+                      "./calisthenics/calisthenics3.jpg",
+                    ]}
                     styling="slider"
                   ></Slider>
                   <h2>Calisthenics</h2>
                   <p>
                     As my job is mostly sitting behind computer. I find
-                    calisthenics an intersting way to keep my body from becoming
-                    stiff like wood.
+                    calisthenics an interesting way to keep my body from
+                    becoming stiff like wood. Here are some of my calisthenics
+                    goals.
                   </p>
                 </div>
               </div>

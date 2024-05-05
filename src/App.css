@@ -247,7 +247,7 @@
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%) translateY(-20%);
-    transition: all 1s;
+    transition: all 1500ms;
   }
 }
 

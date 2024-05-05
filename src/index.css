@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: radial-gradient(circle, #134240 0%, #061615 50%);
+  background: radial-gradient(circle, #061615 0%, black 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -39,4 +39,8 @@ b {
 
 h2 {
   font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
 }
