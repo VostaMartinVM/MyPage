@@ -70,6 +70,7 @@
   border-radius: 10px;
   background-color: transparent;
   border: 1px solid #33b3ae;
+  color: white;
   transition: background-color 0.3s;
 }
 
@@ -79,6 +80,7 @@
   background-color: transparent;
   border: 1px solid #33b3ae;
   transition: background-color 0.3s;
+  color: white;
 }
 
 .buttonStyle:hover,
@@ -184,6 +186,7 @@
 }
 
 .githubButton {
+  color: white;
   border-radius: 10px;
   background: linear-gradient(
       180deg,
@@ -233,6 +236,7 @@
   font-weight: bold;
   width: fit-content;
   text-align: center;
+  color: white;
   cursor: pointer;
   transition: background-image 0.3s ease;
 }
