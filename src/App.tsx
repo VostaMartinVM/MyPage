@@ -442,11 +442,18 @@ function App() {
           <div className="aboutMe">
             <h1 className="generalHeader hidden">About me</h1>
             <p className="hidden">
-              I am 24 year old guy from Tábor, Czech Republic who likes
-              technologies and so on a whim I decided to study software
-              engeneering in Denmark because I hated drilling and Danish
-              universities seems quite project driven which peaked my interest.
-              So here I am
+              I'm a 24-year-old software engineering graduate originally from
+              Tábor, Czech Republic. I chose to pursue my studies at VIA
+              University College in Denmark due to its project-driven approach
+              which aligns perfectly with my hands-on learning style. Having
+              completed my bachelor's degree, I'm committed to creating
+              user-friendly websites with creative layouts and clear code. In
+              addition to coding and other technologies I like to spend my time
+              watching a variety of media and traveling. Although my travels
+              have mostly been in Europe, I have always wanted to visit Eastern
+              Asia, particularly Japan. I also enjoy calisthenics as a
+              counterbalance to my sedentary work, constantly challenging myself
+              to stay fit and flexible.
             </p>
           </div>
           <div className="about">
