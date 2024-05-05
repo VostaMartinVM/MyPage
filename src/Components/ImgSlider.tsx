@@ -5,8 +5,6 @@ type props = {
   styling: string;
 };
 
-const SLIDE_DURATION = 3000;
-
 const ImageSliderPopup: FC<props> = ({pictures, styling}) => {
   const [currentImg, setCurrentImg] = useState<string | undefined>();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,13 +12,6 @@ const ImageSliderPopup: FC<props> = ({pictures, styling}) => {
   useEffect(() => {
     setCurrentImg(pictures && pictures[currentIndex]);
   }, [currentIndex, pictures]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, SLIDE_DURATION);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -69,7 +60,7 @@ const ImageSliderPopup: FC<props> = ({pictures, styling}) => {
       </div>
       <div className="dotContainerStyle">
         {pictures &&
-          pictures.slice(0, 9).map((slide, slideIndex) => (
+          pictures.slice(0, 9).map((_slide, slideIndex) => (
             <div
               className={currentIndex === slideIndex ? "activeDot" : "dotStyle"}
               key={slideIndex}
