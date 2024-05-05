@@ -245,7 +245,7 @@ function App() {
                   openLink(2);
                 }}
                 id="portfolioBlock"
-                className="portfolioBlock"
+                className="portfolioBlock pointer"
               >
                 <Slider
                   pictures={[
@@ -283,7 +283,7 @@ function App() {
                   openLink(3);
                 }}
                 id="portfolioBlock"
-                className="portfolioBlock"
+                className="portfolioBlock pointer"
               >
                 <Slider
                   pictures={["./images/img1.jpg"]}
@@ -314,7 +314,7 @@ function App() {
                   openLink(4);
                 }}
                 id="portfolioBlock"
-                className="portfolioBlock"
+                className="portfolioBlock pointer"
               >
                 <Slider
                   pictures={[
@@ -352,7 +352,7 @@ function App() {
                   openLink(5);
                 }}
                 id="portfolioBlock"
-                className="portfolioBlock"
+                className="portfolioBlock pointer"
               >
                 <Slider
                   pictures={[
